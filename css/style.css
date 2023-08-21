@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* COLORS */
+:root {
+    --mainColor: #ffcdb2;
+    --subColor1: #000;
+    --subColor2: #ffffff;
+    --subColor3: #8e8e8e;
+}
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&display=swap');
+/* MAIN */
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+/* SEARCH AREA */
+.main-section .search-area {
+    background-color: var(--mainColor);
+    width: 40%;
+    height: 100vh;
+    position: fixed;    
+    top: 0;
+    left: 0;
+}
+.main-section .search-area .search-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main-section .search-area .search-content .title {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.main-section .search-area .search-content .search-bar {
+    display: flex;
+    width: 100%;
+}
+.main-section .search-area .search-content .input-area {
+    width: 90%;
+    height: 50px;
+    padding: 2%;
+    border: none;
+    font-size: 17px;
+    outline: none;
+    /* color: var(--subColor3); */
+    font-weight: 400;
+}
+.main-section .search-area .search-content .search-bar .search-btn {
+    width: 10%;
+    background-color: var(--subColor1);
+    color: var(--subColor2);
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    /* text-align: center;
+    line-height: 40px; */
+}
+.main-section .search-area .search-content .search-bar .search-btn i {
+    transition: all ease-out 0.3s;
+}
+.main-section .search-area .search-content .search-bar .search-btn i:hover {
+    color: #ffcdb2;
+    transform: scale(1.1);
+}
+
+/* RESULT AREA */
+.main-section .result-area {
+    background-color: #ffffff;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1.5% 0;
+}
+/* CARD */
+.main-section .result-area .card {
+    width: 45%;
+    box-shadow: 0px 5px 20px #ccc;
+    border-radius: 20px;
+    margin: 2%;  
+}
+.main-section .result-area .card img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;  
+}
+/* CARD INFO */
+.main-section .result-area .card .card-info {
+    margin: 5%;
+    text-align: center;
+    
+}
+.main-section .result-area .card .card-info button {
+    display: inline-block;
+    width: 50%;
+    padding: 3% 7%;
+    border-radius: 20px;
+    margin-top: 5%;
+    border: none;
+    transition: all ease-out 0.3s;
+    background-color: var(--mainColor);
+}
+.main-section .result-area .card .card-info button:hover {
+    background-color: var(--subColor1);
+}
+.main-section .result-area .card .card-info button a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--subColor2);
+}
+/* RECIPE INSTRUCTIONS */
+.main-section .display {
+    display: none;
+}
+.main-section .recipe-instructions {
+    background-color: var(--mainColor);
+    width: 45%;
+    height: 100vh;
+    padding: 5%;
+    position: fixed;    
+    top: 0;
+    left: 0;
+}
+.main-section .recipe-instructions i {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all ease-out 0.5s;
+}
+.main-section .recipe-instructions i:hover {
+    color: var(--subColor1);
+}
+.main-section .recipe-instructions > * {
+    margin-bottom: 6%;
+    color: var(--subColor2);
+}
+.main-section .recipe-instructions h2 {
+    font-size: 28px;
+    font-weight: 700;
+    transition: all ease-out 0.5s;
+}
+.main-section .recipe-instructions h2:hover {
+    color: var(--subColor3);
+}
+.main-section .recipe-instructions p, a {
+    font-size: 20px;
+}
+
+
+
+

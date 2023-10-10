@@ -6,7 +6,7 @@
 }
 /* COLORS */
 :root {
-    --mainColor: #ffcdb2;
+    --mainColor: #f4f4f4;
     --subColor1: #000;
     --subColor2: #ffffff;
     --subColor3: #8e8e8e;
@@ -19,6 +19,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 /* SEARCH AREA */
@@ -57,7 +58,6 @@
     border: none;
     font-size: 17px;
     outline: none;
-    /* color: var(--subColor3); */
     font-weight: 400;
 }
 .main-section .search-area .search-content .search-bar .search-btn {
@@ -67,26 +67,43 @@
     font-size: 26px;
     border: none;
     cursor: pointer;
-    /* text-align: center;
-    line-height: 40px; */
 }
 .main-section .search-area .search-content .search-bar .search-btn i {
     transition: all ease-out 0.3s;
 }
 .main-section .search-area .search-content .search-bar .search-btn i:hover {
-    color: #ffcdb2;
+    color: var(--mainColor);
     transform: scale(1.1);
 }
 
 /* RESULT AREA */
 .main-section .result-area {
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     width: 60%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 1.5% 0;
 }
+.main-section .result-area .main-img {
+    width: 100%;
+    position: relative;
+}
+.main-section .result-area .main-img img {
+    width: 100%;
+
+}
+.main-section .result-area .main-img .no-results  {
+    color: var(--subColor1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--mainColor);
+    padding: 3em;
+}
+
 /* CARD */
 .main-section .result-area .card {
     width: 45%;
@@ -129,7 +146,7 @@
 }
 .main-section .recipe-instructions {
     background-color: var(--mainColor);
-    width: 45%;
+    width: 50%;
     height: 100vh;
     padding: 5%;
     position: fixed;    
@@ -159,9 +176,15 @@
 .main-section .recipe-instructions h2:hover {
     color: var(--subColor3);
 }
-.main-section .recipe-instructions p, a {
-    font-size: 20px;
+.main-section .recipe-instructions p {
+    font-size: 15px;
 }
+.main-section .recipe-instructions a {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
 
 
 
